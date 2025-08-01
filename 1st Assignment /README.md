@@ -3,15 +3,23 @@
 
 ## **Methodology**
 
-This project showcases a constraint-driven development approach, limiting the implementation to just 15 lines of Python code. It follows an API-first architecture, utilizing Groq’s cloud-based AI service.
+This help chat demonstrate a constraint-driven development methodology with a 15
+line Python code limit. It also combines an API first architecture using Groq’s cloud AI 
+service. 
 
 ## **Findings**
 
-AI can be effectively used to create engaging and accessible cybersecurity education tools. Leveraging AI APIs has the potential to enhance academic performance significantly.
+We can use AI to develop effective teaching resources that will make cybersecurity 
+education much easier and more accessible. AI APIs result in improved academic 
+performance.
 
 ## **Conclusion**
 
-This project provided valuable insight into starting development projects, particularly building an AI-powered chatbot. I also gained hands-on experience with API integration. Overall, it was a rewarding learning experience that introduced me to multiple technologies relevant to my future career.
+Learning how to begin projects, and more especially, how to build an AI chatbot, was 
+made possible by this project. Additionally, I learned how to use APIs. All things 
+considered, this project was a fantastic learning experience that exposed me to a 
+variety of technologies that will undoubtedly be useful in my future professional 
+endeavours. 
 
 ## **Code**
 
