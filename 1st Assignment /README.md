@@ -17,4 +17,5 @@ endeavours.
 CODE  
 This code was executed on Google Collab.  
 SOURCE CODE
+![Groq API example](12.png)
 
