@@ -18,7 +18,7 @@ This project provided valuable insight into starting development projects, parti
 The code was developed and executed on Google Colab.
 
 ## **Source Code**
-![Groq API example](12.jpg)
+![Groq API example](/1st Assignment/12.jpg)
 
 ---
 ## **OUTPUT**
