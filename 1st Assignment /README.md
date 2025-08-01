@@ -1,21 +1,26 @@
-ETHICAL HACKING: ASSIGNMENT 1 
-LINUX HELP CHAT USING GROQ API 
- METHODOLOGY 
-This help chat demonstrate a constraint-driven development methodology with a 15
-line Python code limit. It also combines an API first architecture using Groq’s cloud AI 
-service. 
-FINDINGS 
-We can use AI to develop effective teaching resources that will make cybersecurity 
-education much easier and more accessible. AI APIs result in improved academic 
-performance. 
-CONCLUSION 
-Learning how to begin projects, and more especially, how to build an AI chatbot, was 
-made possible by this project. Additionally, I learned how to use APIs. All things 
-considered, this project was a fantastic learning experience that exposed me to a 
-variety of technologies that will undoubtedly be useful in my future professional 
-endeavours. 
-CODE  
-This code was executed on Google Collab.  
-SOURCE CODE
-![Groq API example](12.png)
+## **ETHICAL HACKING: ASSIGNMENT 1**
+**Linux Help Chat Using Groq API**
+
+## **Methodology**
+
+This project showcases a constraint-driven development approach, limiting the implementation to just 15 lines of Python code. It follows an API-first architecture, utilizing Groq’s cloud-based AI service.
+
+## **Findings**
+
+AI can be effectively used to create engaging and accessible cybersecurity education tools. Leveraging AI APIs has the potential to enhance academic performance significantly.
+
+## **Conclusion**
+
+This project provided valuable insight into starting development projects, particularly building an AI-powered chatbot. I also gained hands-on experience with API integration. Overall, it was a rewarding learning experience that introduced me to multiple technologies relevant to my future career.
+
+## **Code**
+
+The code was developed and executed on Google Colab.
+
+## **Source Code**
+![Groq API example](12.jpg)
+
+---
+## **OUTPUT**
+![Groq API example](34.jpg)
 
