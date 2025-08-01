@@ -56,7 +56,7 @@ To monitor and log all `sudo` command usage on Kali Linux every 30 seconds, ensu
 
 ### **Screenshot**
 
-![sudo usage output](/images/output.)
+![sudo usage output](/images/output.png)
 
 ---
 
