@@ -1,34 +1,94 @@
-## **ETHICAL HACKING: ASSIGNMENT 1**
-**Linux Help Chat Using Groq API**
+## **Assignment 14: Sudo Usage Logging**
 
-## **Methodology**
+### **Objective**
 
-This help chat demonstrate a constraint-driven development methodology with a 15
-line Python code limit. It also combines an API first architecture using Groq’s cloud AI 
-service. 
-
-## **Findings**
-
-We can use AI to develop effective teaching resources that will make cybersecurity 
-education much easier and more accessible. AI APIs result in improved academic 
-performance.
-
-## **Conclusion**
-
-Learning how to begin projects, and more especially, how to build an AI chatbot, was 
-made possible by this project. Additionally, I learned how to use APIs. All things 
-considered, this project was a fantastic learning experience that exposed me to a 
-variety of technologies that will undoubtedly be useful in my future professional 
-endeavours. 
-
-## **Code**
-
-The code was developed and executed on Google Colab.
-
-## **Source Code**
-![Groq API example](/images/12.jpg)
+To monitor and log all `sudo` command usage on Kali Linux every 30 seconds, ensuring administrative actions are captured for security auditing and analysis.
 
 ---
-## **OUTPUT**
-![Groq API example](/images/34.jpg)
+
+### **Methodology**
+
+#### **Script Development**
+
+* Created a Python 3 script named `sudo_monitor.py`.
+
+* Implemented a loop running every 30 seconds to execute:
+
+  ```bash
+  journalctl _COMM=sudo --since=-1min
+  ```
+
+  using `subprocess.run(..., shell=True)` to fetch sudo entries from the past minute.
+
+* Parsed each non-empty output line, prefixed it with a timestamp, and appended it to `sudo_usage_log.txt`.
+
+#### **Execution**
+
+* Ran the script with:
+
+  ```bash
+  sudo python3 sudo_monitor.py
+  ```
+* In a separate terminal, executed various `sudo` commands (e.g., `sudo ls`) to generate log entries.
+
+#### **Verification**
+
+* After approximately 30 seconds, stopped the script with `Ctrl+C`.
+* Reviewed `sudo_usage_log.txt` to confirm that the expected entries were captured.
+
+---
+
+### **Findings**
+
+* Successfully logged both the invocation and session details of `sudo` usage.
+
+* Each entry includes:
+
+  * Username
+  * TTY
+  * Working directory
+  * Target user
+  * Executed command
+
+* The script reliably recorded each new `sudo` attempt during each 30-second interval.
+
+---
+
+### **Screenshot**
+
+![sudo usage output](/images/output.)
+
+---
+
+### **Code Access**
+
+import time
+import subprocess
+from datetime import datetime
+
+f = open("sudo_usage_log.txt", "a")
+
+while True:
+    result = subprocess.run(
+        "journalctl _COMM=sudo --since=-1min",
+        shell=True,
+        capture_output=True,
+        text=True
+    )
+    out = result.stdout
+
+    for line in out.split('\n'):
+        if line.strip():
+            f.write(f"{datetime.now()} - {line.strip()}\n")
+
+    f.flush()
+    time.sleep(30)
+
+---
+
+### **Conclusion**
+
+This lightweight Python-based monitoring tool offers an efficient way to log administrative activity. By timestamping each `sudo` usage event, it enhances system visibility, aids in detecting unauthorized privilege escalations, and supports forensic and security investigations.
+
+---
 
